@@ -4,11 +4,11 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const pool = mysql.createPool({
-    host: process.env.MYSQL_IP,
-    port: process.env.MYSQL_PORT,
-    user: process.env.MYSQL_USER,
-    password: process.env.MYSQL_ROOT_PASSWORD,
-    database: process.env.MYSQL_DATABASE,
+    host: '172.17.0.2',
+    port: '3306',
+    user: 'root',
+    password: 'root',
+    database: 'BANCO_DADOS_IT_TALENT',
 }).promise();
 
 export async function getAlunos(){
